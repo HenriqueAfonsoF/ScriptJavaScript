@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleções</title>
+</head>
+<body>
+    <h1>Selecione o sistema desejado</h1>
+    <form>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="VR System"> VR System
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="GDoor"> GDoor
+        </label>
+    </form>
+
+    <h1>Selecione os aplicativos desejados</h1>
+    <form>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Slim"> Slim
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Gcontrol"> Gcontrol
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Gourmet"> Gourmet
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="App Celular"> App Celular
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Gfood"> Gfood
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Gfood Móvel"> Gfood Móvel
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Backup"> Backup
+        </label>
+    </form>
+
+    <h1>Selecione as opções desejadas para Vr_etrade</h1>
+    <form>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="PDV"> PDV
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Etradeweb"> Etradeweb
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Gourmet"> Gourmet
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="GourmetApoio"> GourmetApoio
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="D.S"> D.S
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class "checkbox" data-label="Bridge"> Bridge
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Sintegra"> Sintegra
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Monitor KDS"> Monitor KDS
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Backup"> Backup
+        </label>
+    </form>
+
+    <h1>Selecione as opções desejadas para Módulos Fiscais</h1>
+    <form>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="NF-E"> NF-E
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="NFEE"> NFEE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="CTE"> CTE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="MDE"> MDE
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="MDEE"> MDEE
+        </label>
+    </form>
+    
+    <h1>Selecione as opções desejadas para Estoque</h1>
+    <form>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Produtos"> Produtos
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Entradas"> Entradas
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Produção"> Produção
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Transferência"> Transferência
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Empréstimos"> Empréstimos
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Saídas"> Saídas
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="OS"> OS
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Transporte"> Transporte
+        </label>
+    </form>
+
+    <h1>Selecione as opções desejadas para Financeiro</h1>
+    <form>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Caixa"> Caixa
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Contas a pagar"> Contas a pagar
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Contas a receber"> Contas a receber
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Crédito"> Crédito
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Contas bancárias"> Contas bancárias
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="CRM"> CRM
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" class="checkbox" data-label="Cliente Fornecedor"> Cliente Fornecedor
+        </label>
+    </form>
+
+    <button onclick="mostrarSelecoes()">Mostrar Seleções</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarSelecoes() {
+            const checkboxes = document.querySelectorAll('.checkbox');
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    resultado.innerHTML += `${checkbox.getAttribute('data-label')} foi selecionado.<br>`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
